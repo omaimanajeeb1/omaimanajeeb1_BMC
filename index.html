@@ -1,523 +1,189 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
- <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260907-05-0068bad","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/9e99ecf74af2a081.telemetry_sdk.js" integrity="sha512-tZ7fmfTx2KpCLjXQnEuL9azQ4A5+7+xumsx6r/WYVD0zCP/8LP8hDeCypMQesmP+WyAew4g7l5Ah23Bjd6yoVg=="></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مركز إدارة المشاريع والشركات</title>
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="/_sdk/fbe2ebfd64647c54.data_sdk.js" integrity="sha512-vkTX6CfvpHc3WbjK+tFJCaDuw4ERA4aEV/e5/7+MMJPMTF4RJYCI6CAwJBT/gtDW+dba4uLSsPUgDjVDHWtgUQ=="></script>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <style>
-    :root { --ink:#18324a; --muted:#6b8091; --line:#dce8ed; --sea:#167c80; --sea-soft:#e4f5f3; --paper:#f7fbfc; }
-    * { box-sizing:border-box; }
-    body { font-family:"Tajawal",sans-serif; color:var(--ink); background:var(--paper); }
-    .app-shell { width:100%; min-height:calc(100 * min(var(--vh, 1vh), 1vh)); }
-    .side-rail { background:#fff; border-left:1px solid var(--line); }
-    .nav-item { color:#718496; transition:.2s; }
-    .nav-item:hover,.nav-item.active { color:#0f696d; background:#e8f5f3; }
-    .stat-card,.record-card,.report-panel { background:#fff; border:1px solid var(--line); box-shadow:0 10px 26px rgba(28,69,85,.05); }
-    .record-card { transition:transform .2s, box-shadow .2s; }
-    .record-card:hover { transform:translateY(-3px); box-shadow:0 16px 30px rgba(28,69,85,.1); }
-    .metric-icon { background:#e4f5f3; color:#137176; }
-    .soft-input { border:1px solid #cfdee4; background:#fff; transition:border-color .2s, box-shadow .2s; }
-    .soft-input:focus { outline:0; border-color:#167c80; box-shadow:0 0 0 3px rgba(22,124,128,.12); }
-    .modal-layer { background:rgba(20,42,56,.45); backdrop-filter:blur(4px); }
-    .section-collapsed > :not(.section-toggle) { display:none !important; }
-    .section-toggle { margin-bottom:1rem; }
-    .status-dot { width:7px; height:7px; border-radius:50%; display:inline-block; }
-    .fade-up { animation:fadeUp .45s ease both; }
-    @keyframes fadeUp { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:translateY(0) } }
-    .scroll-area::-webkit-scrollbar { width:7px; height:7px; }
-    .scroll-area::-webkit-scrollbar-thumb { background:#c5d8df; border-radius:99px; }
-    @media (max-width: 1023px) {
-      .side-rail { border-left:0; border-bottom:1px solid var(--line); }
-    }
-  </style>
-  <script src="/_sdk/fcb6dc01f91829ac.resizing_sdk.js" type="text/javascript" integrity="sha512-YK8JfnN705qaEaVhiL7pcVB2Rs/BbdX5yxV55Az8zT/1JanyEWTw9HqCF915m9iV1YEaoil8qsjJz03l1Kb0Ug=="></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
- </head>
- <body data-template-id="__page-root">
-  <div class="app-shell flex flex-col lg:flex-row">
-   <aside class="side-rail w-full lg:w-72 shrink-0 px-5 py-6 lg:py-8">
-    <header class="flex items-center gap-3 px-2 mb-7">
-     <div class="w-11 h-11 rounded-2xl bg-[#167c80] text-white flex items-center justify-center shadow-lg shadow-teal-900/15">
-      <i data-lucide="network" class="w-5 h-5"></i>
-     </div>
-     <div>
-      <h1 data-template-id="brand-name" class="canva-text font-extrabold leading-tight"></h1>
-      <p data-template-id="brand-caption" class="canva-text text-xs mt-1"></p>
-     </div>
-    </header>
-    <nav aria-label="التنقل الرئيسي" class="flex lg:flex-col gap-2 overflow-x-auto pb-2 lg:pb-0">
-     <a href="#overview" class="nav-item active flex items-center gap-3 px-4 py-3 rounded-xl whitespace-nowrap"> <i data-lucide="layout-dashboard" class="w-5 h-5"></i><span data-template-id="nav-overview" class="canva-text"></span> </a> <a href="#entities" class="nav-item flex items-center gap-3 px-4 py-3 rounded-xl whitespace-nowrap"> <i data-lucide="building-2" class="w-5 h-5"></i><span data-template-id="nav-entities" class="canva-text"></span> </a> <a href="#reports" class="nav-item flex items-center gap-3 px-4 py-3 rounded-xl whitespace-nowrap"> <i data-lucide="bar-chart-3" class="w-5 h-5"></i><span data-template-id="nav-reports" class="canva-text"></span> </a>
-    </nav>
-    <div data-template-id="side-help" class="canva-panel hidden lg:block mt-10 rounded-2xl p-4">
-     <div class="w-9 h-9 rounded-xl bg-white/80 flex items-center justify-center text-[#167c80] mb-3"><i data-lucide="sparkles" class="w-4 h-4"></i>
-     </div>
-     <p data-template-id="side-help-title" class="canva-text font-bold text-sm"></p>
-     <p data-template-id="side-help-copy" class="canva-text text-xs leading-5 mt-1"></p>
-    </div><button id="addEntitySide" data-template-id="side-add-button" type="button" class="canva-button mt-5 w-full bg-[#167c80] text-white rounded-xl py-3 px-4 font-bold flex items-center justify-center gap-2 hover:bg-[#10686c] focus:outline-none focus:ring-4 focus:ring-teal-200"> <i data-lucide="plus" class="w-4 h-4"></i><span data-template-id="side-add-label" class="canva-text"></span> </button>
-   </aside>
-   <main class="w-full min-w-0 p-5 md:p-8 lg:p-10">
-    <section id="overview" class="fade-up">
-     <header class="flex flex-col sm:flex-row sm:items-end justify-between gap-5 mb-8">
-      <div>
-       <p data-template-id="eyebrow" class="canva-text text-sm font-bold tracking-wide"></p>
-       <h2 data-template-id="page-title" class="canva-text font-extrabold mt-2"></h2>
-       <p data-template-id="page-subtitle" class="canva-text mt-2 max-w-2xl"></p>
-      </div><button id="addEntityTop" data-template-id="top-add-button" type="button" class="canva-button bg-[#167c80] text-white rounded-xl px-5 py-3 font-bold flex items-center justify-center gap-2 hover:bg-[#10686c] focus:outline-none focus:ring-4 focus:ring-teal-200"> <i data-lucide="plus" class="w-5 h-5"></i><span data-template-id="top-add-label" class="canva-text"></span> </button>
-     </header>
-     <section aria-label="ملخص سريع" class="grid grid-cols-2 xl:grid-cols-4 gap-4">
-      <article class="stat-card rounded-2xl p-5">
-       <div class="metric-icon w-10 h-10 rounded-xl flex items-center justify-center"><i data-lucide="building-2" class="w-5 h-5"></i>
-       </div>
-       <p data-template-id="stat-companies-label" class="canva-text text-sm mt-4"></p>
-       <p id="companiesCount" class="text-3xl font-extrabold mt-1">0</p>
-      </article>
-      <article class="stat-card rounded-2xl p-5">
-       <div class="metric-icon w-10 h-10 rounded-xl flex items-center justify-center"><i data-lucide="git-branch" class="w-5 h-5"></i>
-       </div>
-       <p data-template-id="stat-branches-label" class="canva-text text-sm mt-4"></p>
-       <p id="branchesCount" class="text-3xl font-extrabold mt-1">0</p>
-      </article>
-      <article class="stat-card rounded-2xl p-5">
-       <div class="metric-icon w-10 h-10 rounded-xl flex items-center justify-center"><i data-lucide="briefcase-business" class="w-5 h-5"></i>
-       </div>
-       <p data-template-id="stat-activities-label" class="canva-text text-sm mt-4"></p>
-       <p id="activitiesCount" class="text-3xl font-extrabold mt-1">0</p>
-      </article>
-      <article class="stat-card rounded-2xl p-5">
-       <div class="metric-icon w-10 h-10 rounded-xl flex items-center justify-center"><i data-lucide="wallet-cards" class="w-5 h-5"></i>
-       </div>
-       <p data-template-id="stat-balance-label" class="canva-text text-sm mt-4"></p>
-       <p id="netBalance" class="text-2xl font-extrabold mt-1">٠ ر.س</p>
-      </article>
-     </section>
-    </section>
-    <section id="entities" class="mt-10 fade-up" style="animation-delay:.1s">
-     <button data-template-id="toggle-entities" type="button" class="section-toggle canva-button rounded-xl px-4 py-2.5 font-bold bg-[#edf3f5] text-[#496270]" aria-expanded="true"><span data-template-id="toggle-entities-label" class="canva-text"></span></button>
-     <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-5">
-      <div>
-       <h2 data-template-id="entities-title" class="canva-text font-extrabold"></h2>
-       <p data-template-id="entities-subtitle" class="canva-text text-sm mt-1"></p>
-      </div>
-      <div class="flex flex-wrap gap-3">
-       <label class="relative"> <span class="sr-only">البحث في السجلات</span> <i data-lucide="search" class="w-4 h-4 absolute right-3 top-3 text-slate-400"></i> <input id="searchInput" type="search" class="soft-input rounded-xl pr-9 pl-3 py-2.5 w-52" placeholder="بحث"> </label> <label for="typeFilter" class="sr-only">تصفية حسب النوع</label> <select id="typeFilter" class="soft-input rounded-xl px-3 py-2.5"> <option value="all">كل الأنواع</option> <option value="company">شركة</option> <option value="branch">فرع</option> <option value="activity">نشاط</option> <option value="project">مشروع</option> <option value="team">فريق</option> <option value="client">عميل</option> <option value="database">قاعدة بيانات</option> </select> <label class="flex items-center gap-2 text-sm font-semibold text-slate-600 px-2 cursor-pointer"> <input id="archiveToggle" type="checkbox" class="accent-[#167c80] w-4 h-4"> <span data-template-id="archive-toggle-label" class="canva-text"></span> </label>
-      </div>
-     </div>
-     <div id="entityList" class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4"></div>
-     <div id="emptyState" data-template-id="empty-state" class="canva-banner hidden rounded-2xl py-14 px-6 text-center border border-dashed border-[#c9dce1]">
-      <i data-lucide="folders" class="w-9 h-9 mx-auto mb-3 text-[#167c80]"></i>
-      <p data-template-id="empty-state-title" class="canva-text font-bold"></p>
-      <p data-template-id="empty-state-copy" class="canva-text text-sm mt-2"></p>
-     </div>
-    </section>
-    <section id="tasks" class="mt-10 fade-up" style="animation-delay:.15s">
-     <button data-template-id="toggle-tasks" type="button" class="section-toggle canva-button rounded-xl px-4 py-2.5 font-bold bg-[#edf3f5] text-[#496270]" aria-expanded="true">إظهار / إخفاء البيانات</button>
-     <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-5">
-      <div>
-       <h2 data-template-id="tasks-title" class="canva-text font-extrabold"></h2>
-       <p data-template-id="tasks-subtitle" class="canva-text text-sm mt-1"></p>
-      </div>
-     </div>
-     <div id="taskAlerts" class="hidden mb-5 space-y-3" aria-live="polite"></div>
-     <form id="taskForm" class="stat-card rounded-2xl p-5 mb-5">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
-       <label><span data-template-id="task-title-label" class="canva-text block text-sm font-bold mb-2"></span><input id="taskTitle" required class="soft-input rounded-xl w-full px-3 py-2.5"></label><label><span data-template-id="task-team-label" class="canva-text block text-sm font-bold mb-2"></span><select id="taskTeam" class="soft-input rounded-xl w-full px-3 py-2.5"></select></label><label><span data-template-id="task-assignee-label" class="canva-text block text-sm font-bold mb-2"></span><select id="taskAssignee" class="soft-input rounded-xl w-full px-3 py-2.5"><option value="">غير مُسند</option></select></label><label><span data-template-id="task-due-label" class="canva-text block text-sm font-bold mb-2"></span><input id="taskDueDate" type="date" class="soft-input rounded-xl w-full px-3 py-2.5"></label><label class="md:col-span-2"><span data-template-id="task-conditions-label" class="canva-text block text-sm font-bold mb-2"></span><textarea id="taskConditions" rows="2" class="soft-input rounded-xl w-full px-3 py-2.5 resize-y"></textarea></label>
-      </div>
-      <div class="flex flex-col sm:flex-row gap-3 mt-3">
-       <select id="taskStatus" class="soft-input rounded-xl px-3 py-2.5"><option>جديدة</option><option>قيد التنفيذ</option><option>مكتملة</option></select><select id="taskPriority" class="soft-input rounded-xl px-3 py-2.5"><option>عادية</option><option>عالية</option><option>عاجلة</option></select><label class="flex items-center gap-2 px-2 text-sm font-semibold text-slate-600"><input id="taskApproved" type="checkbox" class="accent-[#167c80] w-4 h-4"><span data-template-id="task-approved-label" class="canva-text"></span></label><label class="flex items-center gap-2 px-2 text-sm font-semibold text-slate-600"><input id="taskReminder" type="checkbox" class="accent-[#167c80] w-4 h-4"><span data-template-id="task-reminder-label" class="canva-text"></span></label><button id="saveTask" data-template-id="save-task-button" type="submit" class="canva-button bg-[#167c80] text-white rounded-xl px-5 py-2.5 font-bold"></button>
-      </div>
-     </form>
-     <div id="taskList" class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4"></div>
-     <section class="mt-7">
-      <div class="mb-4">
-       <h3 data-template-id="member-work-title" class="canva-text font-extrabold"></h3>
-       <p data-template-id="member-work-subtitle" class="canva-text text-sm mt-1"></p>
-      </div>
-      <div id="memberWorkList" class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4"></div>
-     </section>
-    </section>
-    <section id="memberAccounts" class="mt-10 fade-up" style="animation-delay:.17s">
-     <button data-template-id="toggle-member-accounts" type="button" class="section-toggle canva-button rounded-xl px-4 py-2.5 font-bold bg-[#edf3f5] text-[#496270]" aria-expanded="true">إظهار / إخفاء البيانات</button>
-     <div class="mb-5">
-      <h2 data-template-id="member-accounts-title" class="canva-text font-extrabold"></h2>
-      <p data-template-id="member-accounts-subtitle" class="canva-text text-sm mt-1"></p>
-     </div>
-     <form id="memberAccountForm" class="stat-card rounded-2xl p-5 mb-5">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-3"><label><span data-template-id="member-name-label" class="canva-text block text-sm font-bold mb-2"></span><select id="memberName" required class="soft-input rounded-xl w-full px-3 py-2.5"><option value="">اختاري عضواً</option></select></label><label><span data-template-id="member-team-label" class="canva-text block text-sm font-bold mb-2"></span><select id="memberTeam" class="soft-input rounded-xl w-full px-3 py-2.5"></select></label><label><span data-template-id="member-credit-label" class="canva-text block text-sm font-bold mb-2"></span><input id="memberCredit" type="number" min="0" step="0.01" value="0" class="soft-input rounded-xl w-full px-3 py-2.5"></label><label><span data-template-id="member-debit-label" class="canva-text block text-sm font-bold mb-2"></span><input id="memberDebit" type="number" min="0" step="0.01" value="0" class="soft-input rounded-xl w-full px-3 py-2.5"></label> <label class="md:col-span-2"><span data-template-id="member-statement-label" class="canva-text block text-sm font-bold mb-2"></span><textarea id="memberStatement" rows="2" class="soft-input rounded-xl w-full px-3 py-2.5 resize-y"></textarea></label>
-      </div><button data-template-id="save-member-account" type="submit" class="canva-button mt-4 bg-[#167c80] text-white rounded-xl px-5 py-2.5 font-bold">إضافة الحساب</button>
-     </form>
-     <div id="memberAccountList" class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4"></div>
-    </section>
-    <section id="clientAccounts" class="mt-10 fade-up" style="animation-delay:.175s">
-     <button data-template-id="toggle-client-accounts" type="button" class="section-toggle canva-button rounded-xl px-4 py-2.5 font-bold bg-[#edf3f5] text-[#496270]" aria-expanded="true">إظهار / إخفاء البيانات</button>
-     <div class="mb-5">
-      <h2 data-template-id="client-accounts-title" class="canva-text font-extrabold"></h2>
-      <p data-template-id="client-accounts-subtitle" class="canva-text text-sm mt-1"></p>
-     </div>
-     <form id="clientAccountForm" class="stat-card rounded-2xl p-5 mb-5">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-3"><label><span data-template-id="client-account-name-label" class="canva-text block text-sm font-bold mb-2"></span><select id="clientAccountName" required class="soft-input rounded-xl w-full px-3 py-2.5"><option value="">اختاري عميلاً</option></select></label><label><span data-template-id="client-account-credit-label" class="canva-text block text-sm font-bold mb-2"></span><input id="clientAccountCredit" type="number" min="0" step="0.01" value="0" class="soft-input rounded-xl w-full px-3 py-2.5"></label><label><span data-template-id="client-account-debit-label" class="canva-text block text-sm font-bold mb-2"></span><input id="clientAccountDebit" type="number" min="0" step="0.01" value="0" class="soft-input rounded-xl w-full px-3 py-2.5"></label><label><span data-template-id="client-account-statement-label" class="canva-text block text-sm font-bold mb-2"></span><input id="clientAccountStatement" class="soft-input rounded-xl w-full px-3 py-2.5"></label>
-      </div><button data-template-id="save-client-account" type="submit" class="canva-button mt-4 bg-[#167c80] text-white rounded-xl px-5 py-2.5 font-bold">إضافة حساب العميل</button>
-     </form>
-     <div id="clientAccountList" class="overflow-x-auto stat-card rounded-2xl p-5"></div>
-    </section>
-    <section id="operations" class="mt-10 fade-up" style="animation-delay:.18s">
-     <button data-template-id="toggle-operations" type="button" class="section-toggle canva-button rounded-xl px-4 py-2.5 font-bold bg-[#edf3f5] text-[#496270]" aria-expanded="true">إظهار / إخفاء البيانات</button>
-     <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-5">
-      <div>
-       <h2 data-template-id="operations-title" class="canva-text font-extrabold"></h2>
-       <p data-template-id="operations-subtitle" class="canva-text text-sm mt-1"></p>
-      </div>
-      <div class="flex flex-wrap gap-3">
-       <select id="operationTypeFilter" class="soft-input rounded-xl px-3 py-2.5" aria-label="تصفية نوع العملية"><option value="all">كل العمليات</option><option value="create">إضافة</option><option value="update">تعديل</option><option value="archive">أرشفة</option></select> <input id="operationDateFilter" type="date" class="soft-input rounded-xl px-3 py-2.5" aria-label="تصفية حسب التاريخ"> <button id="printOperations" data-template-id="print-operations-button" type="button" class="canva-button rounded-xl px-4 py-2.5 font-bold flex items-center gap-2"><i data-lucide="printer" class="w-4 h-4"></i><span data-template-id="print-operations-label" class="canva-text"></span></button> <button id="exportOperations" data-template-id="export-operations-button" type="button" class="canva-button bg-[#167c80] text-white rounded-xl px-4 py-2.5 font-bold flex items-center gap-2"><i data-lucide="download" class="w-4 h-4"></i><span data-template-id="export-operations-label" class="canva-text"></span></button>
-      </div>
-     </div>
-     <div id="operationList" class="report-panel rounded-2xl p-5 space-y-3"></div>
-    </section>
-    <section id="reports" class="mt-10 fade-up" style="animation-delay:.2s">
-     <button data-template-id="toggle-reports" type="button" class="section-toggle canva-button rounded-xl px-4 py-2.5 font-bold bg-[#edf3f5] text-[#496270]" aria-expanded="true">إظهار / إخفاء البيانات</button>
-     <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-5">
-      <div>
-       <h2 data-template-id="reports-title" class="canva-text font-extrabold"></h2>
-       <p data-template-id="reports-subtitle" class="canva-text text-sm mt-1"></p>
-      </div>
-      <div class="flex flex-wrap gap-3"><button id="dailyReportPdf" data-template-id="daily-report-pdf-button" type="button" class="canva-button rounded-xl px-4 py-2.5 font-bold flex items-center gap-2"><i data-lucide="file-text" class="w-4 h-4"></i><span data-template-id="daily-report-pdf-label" class="canva-text"></span></button> <button id="financialReportPdf" data-template-id="financial-report-button" type="button" class="canva-button rounded-xl px-4 py-2.5 font-bold flex items-center gap-2"><i data-lucide="wallet-cards" class="w-4 h-4"></i><span data-template-id="financial-report-label" class="canva-text"></span></button> <button id="professionalReportPdf" data-template-id="professional-report-button" type="button" class="canva-button rounded-xl px-4 py-2.5 font-bold flex items-center gap-2"><i data-lucide="briefcase-business" class="w-4 h-4"></i><span data-template-id="professional-report-label" class="canva-text"></span></button> <button id="exportDailyCsv" data-template-id="export-daily-csv-button" type="button" class="canva-button bg-[#167c80] text-white rounded-xl px-4 py-2.5 font-bold flex items-center gap-2"><i data-lucide="download" class="w-4 h-4"></i><span data-template-id="export-daily-csv-label" class="canva-text"></span></button>
-      </div>
-     </div>
-     <div class="report-panel rounded-2xl p-5 md:p-6">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-       <div class="border-b md:border-b-0 md:border-l border-[#e1ecef] pb-4 md:pb-0">
-        <p data-template-id="report-budget-label" class="canva-text text-sm"></p>
-        <p id="totalBudget" class="text-2xl font-extrabold text-[#18324a] mt-2">٠ ر.س</p>
-       </div>
-       <div class="border-b md:border-b-0 md:border-l border-[#e1ecef] pb-4 md:pb-0">
-        <p data-template-id="report-income-label" class="canva-text text-sm"></p>
-        <p id="totalIncome" class="text-2xl font-extrabold text-[#137176] mt-2">٠ ر.س</p>
-       </div>
-       <div>
-        <p data-template-id="report-expenses-label" class="canva-text text-sm"></p>
-        <p id="totalExpenses" class="text-2xl font-extrabold text-[#bd5b4c] mt-2">٠ ر.س</p>
-       </div>
-      </div>
-     </div>
-    </section>
-   </main>
-  </div>
-  <template id="entityCardTemplate">
-   <article data-template-id="entity-card" class="canva-card record-card rounded-2xl p-5 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-1.5 h-full bg-[#167c80]"></div>
-    <div class="flex items-start justify-between gap-3">
-     <div class="min-w-0">
-      <span class="entity-type text-xs font-bold rounded-full px-2.5 py-1 bg-[#e4f5f3] text-[#137176]"></span>
-      <h3 class="entity-name font-extrabold text-lg mt-3 truncate"></h3>
-      <p class="entity-parent text-xs text-slate-500 mt-1 truncate"></p>
-     </div><span class="entity-status text-xs font-bold rounded-full px-2.5 py-1 whitespace-nowrap"></span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة الكيانات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            direction: rtl;
+            text-align: right;
+            padding: 16px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .header h1 {
+            color: #0f172a;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 4px 0;
+        }
+
+        .header p {
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .main-btn {
+            width: 100%;
+            background-color: #0d9488;
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 2px 4px rgba(13, 148, 136, 0.15);
+        }
+
+        .main-btn.secondary {
+            background-color: #0f766e;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .stat-card {
+            background-color: white;
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 105px;
+        }
+
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .stat-title {
+            font-size: 13px;
+            color: #475569;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .stat-icon {
+            width: 32px;
+            height: 32px;
+            background-color: #ccfbf1;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .stat-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-top: 10px;
+        }
+
+        .unit {
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            margin-right: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <span class="eyebrow">لوحة التحكم الرئيسية</span>
+            <h1>مركز إدارة المشاريع والشركات</h1>
+            <p>شاشة تشغيلية مركزية لمتابعة كافة الأنشطة، الشركات، المهام، والحسابات المالية.</p>
+        </div>
+
+        <div class="actions">
+            <button class="main-btn">+ إضافة كيان جديد</button>
+            <button class="main-btn secondary">+ إضافة مهمة جديدة</button>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">الشركات الرئيسية</span>
+                    <div class="stat-icon">🏢</div>
+                </div>
+                <div class="stat-value">0</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">الفروع والشركات التابعة</span>
+                    <div class="stat-icon">🌿</div>
+                </div>
+                <div class="stat-value">0</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">الأنشطة والخدمات</span>
+                    <div class="stat-icon">💼</div>
+                </div>
+                <div class="stat-value">0</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">صافي الرصيد الحالي</span>
+                    <div class="stat-icon">👛</div>
+                </div>
+                <div class="stat-value">0 <span class="unit">ر.س</span></div>
+            </div>
+        </div>
     </div>
-    <p class="entity-description text-sm text-slate-600 leading-6 mt-4 min-h-[3rem]"></p>
-    <div class="grid grid-cols-2 gap-3 mt-4 pt-4 border-t border-[#e6eef0] text-sm">
-     <div>
-      <p class="text-slate-400 text-xs">المسؤول</p>
-      <p class="entity-owner font-bold mt-1 truncate"></p>
-     </div>
-     <div>
-      <p class="text-slate-400 text-xs">العميل</p>
-      <p class="entity-client font-bold mt-1 truncate"></p>
-     </div>
-    </div>
-    <div class="flex items-center justify-between mt-5">
-     <span class="entity-net text-sm font-extrabold text-[#137176]"></span>
-     <div class="flex gap-2">
-      <button type="button" class="edit-entity p-2 rounded-lg text-[#167c80] hover:bg-[#e4f5f3] focus:outline-none focus:ring-2 focus:ring-teal-300" aria-label="تعديل السجل"><i data-lucide="pencil" class="w-4 h-4"></i></button> <button type="button" class="archive-entity p-2 rounded-lg text-slate-500 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300" aria-label="أرشفة السجل"><i data-lucide="archive" class="w-4 h-4"></i></button>
-     </div>
-    </div>
-   </article>
-  </template>
-  <div id="entityModal" class="modal-layer hidden fixed inset-0 z-50 p-4 overflow-y-auto">
-   <div class="min-h-full flex items-center justify-center">
-    <section class="w-full max-w-3xl bg-white rounded-3xl shadow-2xl overflow-hidden my-6" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-     <header class="p-6 border-b border-[#e3edef] flex items-center justify-between">
-      <div>
-       <h2 id="modalTitle" data-template-id="modal-title-add" class="canva-text font-extrabold"></h2>
-       <p data-template-id="modal-subtitle" class="canva-text text-sm mt-1"></p>
-      </div><button id="closeModal" type="button" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-teal-300" aria-label="إغلاق"><i data-lucide="x" class="w-5 h-5"></i></button>
-     </header>
-     <form id="entityForm" class="p-6">
-      <input id="editingId" type="hidden">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-       <div>
-        <label data-template-id="label-type" class="canva-text block text-sm font-bold mb-2" for="entityType"></label> <select id="entityType" required class="soft-input rounded-xl w-full px-3 py-3"> <option value="company">شركة رئيسية</option><option value="branch">شركة/فرع تابع</option><option value="activity">نشاط</option><option value="project">مشروع</option><option value="team">فريق</option><option value="client">عميل</option><option value="database">قاعدة بيانات</option> </select>
-       </div>
-       <div>
-        <label data-template-id="label-parent" class="canva-text block text-sm font-bold mb-2" for="parentId"></label> <select id="parentId" class="soft-input rounded-xl w-full px-3 py-3"><option value="">بدون كيان رئيسي</option></select>
-       </div>
-       <div>
-        <label data-template-id="label-name" class="canva-text block text-sm font-bold mb-2" for="entityName"></label> <input id="entityName" required type="text" class="soft-input rounded-xl w-full px-3 py-3">
-       </div>
-       <div>
-        <label data-template-id="label-status" class="canva-text block text-sm font-bold mb-2" for="entityStatus"></label> <select id="entityStatus" class="soft-input rounded-xl w-full px-3 py-3"><option>نشط</option><option>قيد التخطيط</option><option>متوقف</option><option>مكتمل</option></select>
-       </div>
-       <div>
-        <label data-template-id="label-owner" class="canva-text block text-sm font-bold mb-2" for="entityOwner"></label> <input id="entityOwner" type="text" class="soft-input rounded-xl w-full px-3 py-3">
-       </div>
-       <div>
-        <label data-template-id="label-client" class="canva-text block text-sm font-bold mb-2" for="entityClient"></label> <input id="entityClient" type="text" class="soft-input rounded-xl w-full px-3 py-3">
-       </div>
-       <div>
-        <label data-template-id="label-activity" class="canva-text block text-sm font-bold mb-2" for="entityActivity"></label> <input id="entityActivity" type="text" class="soft-input rounded-xl w-full px-3 py-3">
-       </div>
-       <div>
-        <label data-template-id="label-team" class="canva-text block text-sm font-bold mb-2" for="entityTeam"></label> <textarea id="entityTeam" rows="2" class="soft-input rounded-xl w-full px-3 py-3 resize-y" placeholder="اسم كل عضو في سطر مستقل"></textarea>
-       </div>
-       <div>
-        <label data-template-id="label-client-email" class="canva-text block text-sm font-bold mb-2" for="clientEmail"></label> <input id="clientEmail" type="email" class="soft-input rounded-xl w-full px-3 py-3">
-       </div>
-       <div>
-        <label data-template-id="label-client-phone" class="canva-text block text-sm font-bold mb-2" for="clientPhone"></label> <input id="clientPhone" type="tel" class="soft-input rounded-xl w-full px-3 py-3">
-       </div>
-       <div>
-        <label data-template-id="label-client-company" class="canva-text block text-sm font-bold mb-2" for="clientCompany"></label> <input id="clientCompany" type="text" class="soft-input rounded-xl w-full px-3 py-3">
-       </div>
-       <div>
-        <label data-template-id="label-due-date" class="canva-text block text-sm font-bold mb-2" for="entityDueDate"></label> <input id="entityDueDate" type="date" class="soft-input rounded-xl w-full px-3 py-3">
-       </div>
-       <div>
-        <label data-template-id="label-budget" class="canva-text block text-sm font-bold mb-2" for="entityBudget"></label> <input id="entityBudget" type="number" min="0" step="0.01" value="0" class="soft-input rounded-xl w-full px-3 py-3">
-       </div>
-       <div>
-        <label data-template-id="label-income" class="canva-text block text-sm font-bold mb-2" for="entityIncome"></label> <input id="entityIncome" type="number" min="0" step="0.01" value="0" class="soft-input rounded-xl w-full px-3 py-3">
-       </div>
-       <div>
-        <label data-template-id="label-expenses" class="canva-text block text-sm font-bold mb-2" for="entityExpenses"></label> <input id="entityExpenses" type="number" min="0" step="0.01" value="0" class="soft-input rounded-xl w-full px-3 py-3">
-       </div>
-      </div>
-      <div class="mt-5">
-       <label data-template-id="label-description" class="canva-text block text-sm font-bold mb-2" for="entityDescription"></label> <textarea id="entityDescription" rows="3" class="soft-input rounded-xl w-full px-3 py-3 resize-y"></textarea>
-      </div>
-      <p id="formMessage" class="hidden mt-4 text-sm font-bold" aria-live="polite"></p>
-      <footer class="flex flex-col-reverse sm:flex-row gap-3 justify-end mt-6 pt-5 border-t border-[#e3edef]">
-       <button id="cancelModal" data-template-id="cancel-button" type="button" class="canva-button rounded-xl px-5 py-3 font-bold"></button> <button id="saveEntity" data-template-id="save-button" type="submit" class="canva-button bg-[#167c80] text-white rounded-xl px-5 py-3 font-bold hover:bg-[#10686c] focus:outline-none focus:ring-4 focus:ring-teal-200"></button>
-      </footer>
-     </form>
-    </section>
-   </div>
-  </div>
-  <script src="/_sdk/92570d8e491862b9.editing_sdk.js" integrity="sha512-FgTgBgZOGUl1XBrojWdmYvV2Ka+jYLWeeIrMhp1Q1xMV3FJfF+VJFjO6hw+EDGnXYa+zMZXNIP5UYLxGsdfP6g=="></script>
-  <script>
-    document.querySelectorAll('.section-toggle').forEach(button => button.addEventListener('click', () => {
-      const section = button.closest('section');
-      const collapsed = section.classList.toggle('section-collapsed');
-      button.setAttribute('aria-expanded', String(!collapsed));
-    }));
-    const state = { records: [], initialized: false, editingTaskId: "" };
-    function taskRecords(){ return state.records.filter(r=>r.task_title); }
-    function memberRecords(){ return state.records.filter(r=>r.member_name); }
-    function operationRecords(){ return state.records.filter(r=>r.operation_type); }
-    function renderOperations(){ const list=$("operationList"); const type=$("operationTypeFilter").value, date=$("operationDateFilter").value; const rows=operationRecords().filter(r=>(type==="all"||r.operation_type===type)&&(!date||String(r.operation_at||"").startsWith(date))).sort((a,b)=>(b.operation_at||"").localeCompare(a.operation_at||"")); list.innerHTML=rows.length?rows.map(r=>`<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#e6eef0] pb-3 last:border-0 last:pb-0"><div><p class="font-bold">${esc(r.operation_details||r.operation_type)}</p><p class="text-xs text-slate-500 mt-1">${esc(r.operation_entity||"سجل")} · ${esc(r.operation_actor||"النظام")}</p></div><time class="text-xs text-slate-500" datetime="${esc(r.operation_at)}">${esc(new Date(r.operation_at).toLocaleString("ar-SA"))}</time></div>`).join(""):"<p class=\"text-sm text-slate-500\">لا توجد عمليات مطابقة.</p>"; }
-    async function logOperation(type, entity, id, details){ if(!window.dataSdk) return; await window.dataSdk.create({operation_type:type,operation_entity:entity,operation_record_id:id||"",operation_details:details,operation_actor:"المستخدمة",operation_at:new Date().toISOString(),archived:false,created_at:new Date().toISOString(),updated_at:new Date().toISOString()}); }
-    function taskDueState(t){ const today=new Date().toISOString().slice(0,10); if(!t.task_reminder || !t.task_due_date || t.task_status==="مكتملة") return ""; return t.task_due_date<today ? "overdue" : t.task_due_date===today ? "today" : ""; }
-    function renderTaskAlerts(){ const box=$("taskAlerts"), alerts=taskRecords().map(t=>({task:t,state:taskDueState(t)})).filter(x=>x.state); if(!alerts.length){ box.classList.add("hidden"); box.innerHTML=""; return; } box.classList.remove("hidden"); box.innerHTML=alerts.map(({task,state})=>`<div class="rounded-2xl border px-4 py-3 flex items-start gap-3 bg-rose-50 border-rose-200 text-rose-800"><i data-lucide="${state==="overdue"?"triangle-alert":"bell-ring"}" class="w-5 h-5 shrink-0 mt-0.5"></i><div><p class="font-extrabold">${state==="overdue"?"مهمة متأخرة":"مهمة مستحقة اليوم"}</p><p class="text-sm mt-1">${esc(task.task_title)}${task.assignee?" · "+esc(task.assignee):""}</p></div></div>`).join(""); lucide.createIcons(); }
-    function renderTasks(){ const list=$("taskList"); list.innerHTML=""; taskRecords().sort((a,b)=>(a.task_due_date||"").localeCompare(b.task_due_date||"")).forEach(t=>{ const card=document.createElement("article"); const due=taskDueState(t); card.className="stat-card rounded-2xl p-5 "+(due==="overdue"||due==="today"?"border-rose-300 bg-rose-50/40":""); card.innerHTML=`<div class="flex items-start justify-between gap-3"><div><h3 class="font-extrabold text-lg">${esc(t.task_title)}</h3><p class="text-sm text-slate-500 mt-1">${esc(t.team_name||"بدون فريق")} · ${esc(t.assignee||"غير مُسند")}</p></div><span class="text-xs font-bold rounded-full px-2.5 py-1 bg-[#e4f5f3] text-[#137176]">${esc(t.task_status||"جديدة")}</span></div><p class="text-xs text-slate-500 mt-4">الأولوية: ${esc(t.task_priority||"عادية")} · التسليم: ${esc(t.task_due_date||"غير محدد")}</p>${due?`<p class="text-xs font-extrabold mt-2 text-rose-700">${due==="overdue"?"متأخرة عن الموعد":"مستحقة اليوم"}</p>`:""}<p class="text-xs text-slate-600 mt-2">الشروط: ${esc(t.task_conditions||"لا توجد شروط محددة")}</p><p class="text-xs font-bold mt-2 ${t.task_approved ? "text-emerald-700" : "text-amber-700"}">${t.task_approved ? "معتمدة" : "بانتظار الاعتماد"}${t.approved_by ? " · " + esc(t.approved_by) : ""}</p><div class="flex gap-2 mt-4"><button type="button" class="edit-task rounded-lg px-3 py-2 text-xs font-bold bg-slate-100 text-slate-700" data-id="${esc(t.__backendId)}">تعديل</button><button type="button" class="complete-task rounded-lg px-3 py-2 text-xs font-bold bg-emerald-50 text-emerald-700" data-id="${esc(t.__backendId)}">${t.task_status==="مكتملة"?"إعادة فتح":"إتمام المهمة"}</button></div>`; card.querySelector(".edit-task").addEventListener("click",()=>editTask(t)); card.querySelector(".complete-task").addEventListener("click",()=>completeTask(t)); list.appendChild(card); }); renderTaskAlerts(); renderMemberWork(); }
-    async function editTask(t){ state.editingTaskId=t.__backendId; $("taskTitle").value=t.task_title||""; $("taskStatus").value=t.task_status||"جديدة"; $("taskPriority").value=t.task_priority||"عادية"; $("taskDueDate").value=t.task_due_date||""; $("taskConditions").value=t.task_conditions||""; $("taskReminder").checked=!!t.task_reminder; $("taskApproved").checked=!!t.task_approved; refreshTaskTeams(); $("taskTeam").value=t.team_name||""; refreshAssignees(); $("taskAssignee").value=t.assignee||""; $("saveTask").textContent="حفظ التعديل"; $("taskTitle").focus(); }
-    async function completeTask(t){ const result=await window.dataSdk.update({...t,task_status:t.task_status==="مكتملة"?"قيد التنفيذ":"مكتملة",task_completed:t.task_status!=="مكتملة",task_progress:t.task_status!=="مكتملة"?100:0,updated_at:new Date().toISOString()}); if(!result.isOk) showToast("تعذر تحديث المهمة."); }
-    function renderMemberWork(){ const list=$("memberWorkList"); list.innerHTML=""; const tasks=taskRecords(); state.records.filter(r=>r.entity_type==="team"&&!r.archived).forEach(team=>{ const members=(team.team_members||"").split(/[,،\n]/).map(v=>v.trim()).filter(Boolean); members.forEach(member=>{ const assigned=tasks.filter(t=>t.team_name===team.name&&t.assignee===member); const card=document.createElement("article"); card.className="stat-card rounded-2xl p-5"; card.innerHTML=`<div class="flex items-center justify-between gap-3"><div><h4 class="font-extrabold">${esc(member)}</h4><p class="text-xs text-slate-500 mt-1">${esc(team.name)} · ${assigned.length} مهمة</p></div><span class="rounded-full px-2.5 py-1 text-xs font-bold bg-[#e4f5f3] text-[#137176]">${assigned.filter(t=>t.task_status==="مكتملة").length} مكتملة</span></div><div class="mt-4 space-y-2">${assigned.length ? assigned.map(t=>`<div class="flex items-center justify-between gap-2 text-sm border-t border-[#e6eef0] pt-2"><span class="truncate">${esc(t.task_title)}</span><span class="text-xs text-slate-500 whitespace-nowrap">${esc(t.task_status||"جديدة")}</span></div>`).join("") : '<p class="text-sm text-slate-500">لا توجد مهام مسندة بعد.</p>'}</div><div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4"><button type="button" class="member-report rounded-xl px-3 py-2.5 text-sm font-bold bg-[#edf3f5] text-[#496270] hover:bg-[#e4f5f3] focus:outline-none focus:ring-2 focus:ring-teal-300">إصدار تقرير مهني للعضو</button><button type="button" class="member-financial-report rounded-xl px-3 py-2.5 text-sm font-bold bg-[#e4f5f3] text-[#137176] hover:bg-[#d5efec] focus:outline-none focus:ring-2 focus:ring-teal-300">إصدار التقرير المالي</button></div>`; card.querySelector(".member-report").addEventListener("click",()=>printMemberReport(member,team.name,assigned)); card.querySelector(".member-financial-report").addEventListener("click",()=>printMemberFinancialReport(member,team.name)); list.appendChild(card); }); }); }
-    function printMemberReport(member, teamName, tasks){ const completed=tasks.filter(t=>t.task_status==="مكتملة"), pending=tasks.filter(t=>t.task_status!=="مكتملة"); const rows=list=>list.length?list.map(t=>`<tr><td>${esc(t.task_title)}</td><td>${esc(t.task_status||"جديدة")}</td><td>${esc(t.task_priority||"عادية")}</td><td>${esc(t.task_due_date||"غير محدد")}</td></tr>`).join(""):'<tr><td colspan="4">لا توجد مهام</td></tr>'; const w=window.open("","_blank"); if(!w)return; w.document.write(`<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>التقرير المهني - ${esc(member)}</title><style>body{font-family:Arial,sans-serif;color:#18324a;padding:32px;line-height:1.7}h1,h2{color:#167c80;border-bottom:2px solid #167c80;padding-bottom:10px}table{width:100%;border-collapse:collapse;margin:12px 0 28px}th,td{border:1px solid #dce8ed;padding:10px;text-align:right}th{background:#e4f5f3}@media print{button{display:none}}</style></head><body><h1>التقرير المهني للعضو</h1><p><b>العضو:</b> ${esc(member)} · <b>الفريق:</b> ${esc(teamName)}</p><h2>المهام المكتملة (${completed.length})</h2><table><thead><tr><th>المهمة</th><th>الحالة</th><th>الأولوية</th><th>موعد التسليم</th></tr></thead><tbody>${rows(completed)}</tbody></table><h2>المهام غير المكتملة (${pending.length})</h2><table><thead><tr><th>المهمة</th><th>الحالة</th><th>الأولوية</th><th>موعد التسليم</th></tr></thead><tbody>${rows(pending)}</tbody></table><script>window.onload=()=>window.print()<\/script></body></html>`); w.document.close(); }
-    function printMemberFinancialReport(member, teamName){ const records=memberRecords().filter(r=>r.member_name===member&&(r.member_team||"")===teamName); const credit=records.reduce((sum,r)=>sum+(Number(r.member_credit)||0),0), debit=records.reduce((sum,r)=>sum+(Number(r.member_debit)||0),0), remaining=credit-debit; const rows=records.length?records.map(r=>`<tr><td>${esc(r.member_statement||"—")}</td><td>${money.format(Number(r.member_credit)||0)}</td><td>${money.format(Number(r.member_debit)||0)}</td><td>${money.format((Number(r.member_credit)||0)-(Number(r.member_debit)||0))}</td></tr>`).join(""):'<tr><td colspan="4">لا توجد حركات مالية مسجلة</td></tr>'; const w=window.open("","_blank"); if(!w)return; w.document.write(`<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>التقرير المالي - ${esc(member)}</title><style>body{font-family:Arial,sans-serif;color:#18324a;padding:32px;line-height:1.7}h1,h2{color:#167c80;border-bottom:2px solid #167c80;padding-bottom:10px}table{width:100%;border-collapse:collapse;margin:18px 0 28px}th,td{border:1px solid #dce8ed;padding:10px;text-align:right}th{background:#e4f5f3}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.box{border:1px solid #dce8ed;border-radius:10px;padding:14px}@media print{button{display:none}}</style></head><body><h1>التقرير المالي للعضو</h1><p><b>العضو:</b> ${esc(member)} · <b>الفريق:</b> ${esc(teamName)}</p><div class="summary"><div class="box">إجمالي الدائن<br><b>${money.format(credit)}</b></div><div class="box">إجمالي المدين<br><b>${money.format(debit)}</b></div><div class="box">المتبقي عليه<br><b>${money.format(remaining)}</b></div></div><h2>كشف الحساب</h2><table><thead><tr><th>البيان</th><th>الدائن</th><th>المدين</th><th>المتبقي</th></tr></thead><tbody>${rows}</tbody></table><script>window.onload=()=>window.print()<\/script></body></html>`); w.document.close(); }
-    function refreshMemberTeams(){ const s=$("memberTeam"),prior=s.value;s.innerHTML='<option value="">بدون فريق</option>';state.records.filter(r=>r.entity_type==="team"&&!r.archived).forEach(r=>{const o=document.createElement("option");o.value=r.name;o.textContent=r.name;if(r.name===prior)o.selected=true;s.appendChild(o);}); }
-    function refreshTaskTeams(){ const s=$("taskTeam"), prior=s.value; s.innerHTML='<option value="">بدون فريق</option>'; state.records.filter(r=>r.entity_type==="team"&&!r.archived).forEach(r=>{ const o=document.createElement("option"); o.value=r.name; o.textContent=r.name; if(r.name===prior) o.selected=true; s.appendChild(o); }); refreshAssignees(); }
-    function refreshAssignees(){ const s=$("taskAssignee"), team=state.records.find(r=>r.entity_type==="team"&&!r.archived&&r.name===$("taskTeam").value), prior=s.value; s.innerHTML='<option value="">غير مُسند</option>'; (team?.team_members||"").split(/[,،\n]/).map(v=>v.trim()).filter(Boolean).forEach(member=>{ const o=document.createElement("option"); o.value=member; o.textContent=member; if(member===prior) o.selected=true; s.appendChild(o); }); }
-    const typeNames = { company:"شركة", branch:"فرع", activity:"نشاط", project:"مشروع", team:"فريق", client:"عميل", database:"قاعدة بيانات" };
-    const money = new Intl.NumberFormat("ar-SA", { style:"currency", currency:"SAR", maximumFractionDigits:0 });
 
-    const $ = id => document.getElementById(id);
-    function text(value, fallback="—") { return value && String(value).trim() ? value : fallback; }
-    function esc(value) { const d=document.createElement("div"); d.textContent=value || ""; return d.innerHTML; }
-
-    function visibleRecords() {
-      const q = $("searchInput").value.trim().toLowerCase();
-      const type = $("typeFilter").value;
-      const archived = $("archiveToggle").checked;
-      return state.records.filter(r => !r.task_title && !r.operation_type && (() => {
-        const matchesArchive = archived ? r.archived : !r.archived;
-        const haystack = [r.name,r.description,r.owner,r.client_name,r.activity].join(" ").toLowerCase();
-        return matchesArchive && (type === "all" || r.entity_type === type) && (!q || haystack.includes(q));
-      })());
-    }
-    function parentName(record) {
-      if (!record.parent_id) return "كيان مستقل";
-      const parent = state.records.find(r => r.__backendId === record.parent_id);
-      return parent ? "يتبع لـ: " + parent.name : "كيان رئيسي غير متاح";
-    }
-    function renderMetrics() {
-      const active = state.records.filter(r => !r.archived);
-      $("companiesCount").textContent = active.filter(r=>r.entity_type==="company").length;
-      $("branchesCount").textContent = active.filter(r=>r.entity_type==="branch").length;
-      $("activitiesCount").textContent = active.filter(r=>r.entity_type==="activity").length;
-      const sums = active.reduce((a,r)=>({budget:a.budget+(Number(r.budget)||0),income:a.income+(Number(r.income)||0),expenses:a.expenses+(Number(r.expenses)||0)}),{budget:0,income:0,expenses:0});
-      $("netBalance").textContent = money.format(sums.income-sums.expenses);
-      $("totalBudget").textContent = money.format(sums.budget);
-      $("totalIncome").textContent = money.format(sums.income);
-      $("totalExpenses").textContent = money.format(sums.expenses);
-    }
-    function statusStyle(status) {
-      const map = { "نشط":"bg-emerald-50 text-emerald-700", "قيد التخطيط":"bg-amber-50 text-amber-700", "مكتمل":"bg-sky-50 text-sky-700", "متوقف":"bg-rose-50 text-rose-700" };
-      return map[status] || "bg-slate-100 text-slate-600";
-    }
-    function makeCard(record) {
-      const frag = $("entityCardTemplate").content.cloneNode(true);
-      const card = frag.querySelector("article");
-      card.dataset.id = record.__backendId;
-      card.querySelector(".entity-type").textContent = typeNames[record.entity_type] || "كيان";
-      card.querySelector(".entity-name").textContent = text(record.name);
-      card.querySelector(".entity-parent").textContent = parentName(record);
-      const status = card.querySelector(".entity-status");
-      status.textContent = text(record.status,"غير محدد"); status.className = "entity-status text-xs font-bold rounded-full px-2.5 py-1 whitespace-nowrap " + statusStyle(record.status);
-      card.querySelector(".entity-description").textContent = text(record.description,"لا توجد ملاحظات تشغيلية.");
-      card.querySelector(".entity-owner").textContent = text(record.owner);
-      card.querySelector(".entity-client").textContent = text(record.client_name);
-      card.querySelector(".entity-net").textContent = "الصافي: " + money.format((Number(record.income)||0)-(Number(record.expenses)||0));
-      card.querySelector(".edit-entity").addEventListener("click", ()=>openModal(record));
-      card.querySelector(".archive-entity").addEventListener("click", ()=>toggleArchive(record));
-      return frag;
-    }
-    function renderList() {
-      const list = $("entityList"), wanted = visibleRecords();
-      const existing = new Map([...list.children].map(el=>[el.dataset.id,el]));
-      wanted.forEach(record => {
-        const old = existing.get(record.__backendId);
-        const replacement = makeCard(record).firstElementChild;
-        if (old) { old.replaceWith(replacement); existing.delete(record.__backendId); }
-        else list.appendChild(replacement);
-      });
-      existing.forEach(el=>el.remove());
-      $("emptyState").classList.toggle("hidden", wanted.length !== 0);
-      lucide.createIcons();
-    }
-    async function resetMemberAccount(id,button){ const record=state.records.find(r=>r.__backendId===id); if(!record) return; if(button.dataset.confirm!=="yes"){ button.dataset.confirm="yes"; button.textContent="اضغطي للتأكيد"; setTimeout(()=>{ if(button.dataset.confirm==="yes"){button.dataset.confirm="";button.textContent="تصفير الحساب";} },3000); return; } button.disabled=true; button.textContent="جارٍ التصفير..."; const result=await window.dataSdk.update({...record,member_credit:0,member_debit:0,updated_at:new Date().toISOString()}); if(!result.isOk){button.disabled=false;button.dataset.confirm="";button.textContent="تصفير الحساب";showToast("تعذر تصفير الحساب.");} }
-    function refreshAccountPeople(){ const members=$("memberName"), clients=$("clientAccountName"), mv=members.value, cv=clients.value; members.innerHTML='<option value="">اختاري عضواً</option>'; clients.innerHTML='<option value="">اختاري عميلاً</option>'; state.records.filter(r=>r.entity_type==="team"&&!r.archived).flatMap(r=>(r.team_members||"").split(/[,،\n]/).map(v=>v.trim()).filter(Boolean)).filter((v,i,a)=>a.indexOf(v)===i).forEach(v=>{const o=document.createElement("option");o.value=v;o.textContent=v;if(v===mv)o.selected=true;members.appendChild(o);}); state.records.filter(r=>r.entity_type==="client"&&!r.archived).forEach(r=>{const o=document.createElement("option");o.value=r.name;o.textContent=r.name;if(r.name===cv)o.selected=true;clients.appendChild(o);}); }
-    function accountTable(records,nameKey,creditKey,debitKey,statementKey){ return records.length?`<table class="w-full text-sm text-right"><thead><tr class="border-b border-[#e6eef0] text-slate-500"><th class="p-3">الاسم</th><th class="p-3">البيان</th><th class="p-3">الدائن</th><th class="p-3">المدين</th><th class="p-3">الرصيد النهائي</th><th class="p-3">إجراء</th></tr></thead><tbody>${records.map(r=>`<tr class="border-b border-[#e6eef0] last:border-0"><td class="p-3 font-bold">${esc(r[nameKey])}</td><td class="p-3 text-slate-600">${esc(r[statementKey]||"—")}</td><td class="p-3 text-emerald-700">${money.format(Number(r[creditKey])||0)}</td><td class="p-3 text-rose-700">${money.format(Number(r[debitKey])||0)}</td><td class="p-3 font-extrabold text-[#137176]">${money.format((Number(r[creditKey])||0)-(Number(r[debitKey])||0))}</td><td class="p-3"><button type="button" class="reset-member rounded-lg px-3 py-2 text-xs font-bold bg-amber-50 text-amber-700" data-id="${esc(r.__backendId)}">تصفير الحساب</button></td></tr>`).join("")}</tbody></table>`:'<p class="text-sm text-slate-500">لا توجد حسابات بعد.</p>'; }
-    function renderMemberAccounts(){ const list=$("memberAccountList"); list.innerHTML=accountTable(memberRecords(),"member_name","member_credit","member_debit","member_statement"); list.querySelectorAll(".reset-member").forEach(button=>button.addEventListener("click",()=>resetMemberAccount(button.dataset.id,button))); }
-    function clientAccountRecords(){ return state.records.filter(r=>r.client_id); }
-    function renderClientAccounts(){ $("clientAccountList").innerHTML=accountTable(clientAccountRecords(),"client_name","client_credit","client_debit","client_statement"); }
-
-    function renderAll() { renderMetrics(); renderList(); renderTasks(); renderMemberAccounts(); renderClientAccounts(); renderOperations(); refreshParentOptions(); refreshTaskTeams(); refreshMemberTeams(); refreshAccountPeople(); }
-
-    function refreshParentOptions(selected="") {
-      const select = $("parentId"), editing = $("editingId").value;
-      const prior = selected || select.value;
-      select.innerHTML = '<option value="">بدون كيان رئيسي</option>';
-      state.records.filter(r=>!r.archived && r.__backendId !== editing).forEach(r => {
-        const option=document.createElement("option");
-        option.value=r.__backendId; option.textContent=(typeNames[r.entity_type]||"كيان")+" — "+r.name;
-        if(r.__backendId===prior) option.selected=true;
-        select.appendChild(option);
-      });
-    }
-    function setFormValue(id,value) { $(id).value = value ?? ""; }
-    function openModal(record=null) {
-      $("entityForm").reset(); $("formMessage").classList.add("hidden");
-      $("editingId").value = record ? record.__backendId : "";
-      refreshParentOptions(record ? record.parent_id : "");
-      if(record) {
-        setFormValue("entityType",record.entity_type); setFormValue("entityName",record.name); setFormValue("entityStatus",record.status);
-        setFormValue("entityOwner",record.owner); setFormValue("entityClient",record.client_name); setFormValue("entityActivity",record.activity);
-        setFormValue("entityTeam",record.team_members); setFormValue("clientEmail",record.client_email); setFormValue("clientPhone",record.client_phone); setFormValue("clientCompany",record.client_company); setFormValue("entityDueDate",record.due_date); setFormValue("entityBudget",record.budget);
-        setFormValue("entityIncome",record.income); setFormValue("entityExpenses",record.expenses); setFormValue("entityDescription",record.description);
-        $("modalTitle").textContent = "تعديل بيانات الكيان";
-      } else {
-        $("entityBudget").value=0; $("entityIncome").value=0; $("entityExpenses").value=0;
-        $("modalTitle").textContent = "إضافة كيان جديد";
-      }
-      $("entityModal").classList.remove("hidden"); $("entityName").focus();
-    }
-    function closeModal() { $("entityModal").classList.add("hidden"); }
-    function showFormMessage(message, good=false) {
-      const el=$("formMessage"); el.textContent=message; el.className="mt-4 text-sm font-bold "+(good?"text-emerald-700":"text-rose-600");
-    }
-    async function toggleArchive(record) {
-      const card = document.querySelector(`[data-id="${record.__backendId}"]`);
-      const button = card?.querySelector(".archive-entity");
-      if (button) { button.disabled = true; button.classList.add("opacity-50", "cursor-wait"); }
-      try {
-        const result = await window.dataSdk.update({...record, archived:!record.archived, updated_at:new Date().toISOString()});
-        if(result.isOk) await logOperation("archive","كيان",record.__backendId,record.archived?"تمت استعادة السجل":"تمت أرشفة السجل");
-        if(!result.isOk) showToast("تعذر تحديث حالة الأرشفة. حاولي مرة أخرى.");
-      } catch (error) {
-        showToast("تعذر الاتصال أثناء تحديث الأرشفة. حاولي مرة أخرى.");
-      } finally {
-        if (button) { button.disabled = false; button.classList.remove("opacity-50", "cursor-wait"); }
-      }
-    }
-    function showToast(message) {
-      const msg=$("formMessage"); msg.textContent=message;
-      if (!$("entityModal").classList.contains("hidden")) { msg.className="mt-4 text-sm font-bold text-rose-600"; }
-    }
-
-    $("entityForm").addEventListener("submit", async event => {
-      event.preventDefault();
-      const button=$("saveEntity"), id=$("editingId").value;
-      if(!id && state.records.length >= 999) { showFormMessage("تم الوصول إلى الحد الأقصى: ٩٩٩ سجلاً. احذفي أو أرشفي سجلات أولاً."); return; }
-      button.disabled=true; button.classList.add("opacity-60","cursor-wait");
-      const now=new Date().toISOString();
-      const payload={
-        entity_type:$("entityType").value, parent_id:$("parentId").value, name:$("entityName").value.trim(),
-        description:$("entityDescription").value.trim(), status:$("entityStatus").value, owner:$("entityOwner").value.trim(),
-        budget:Number($("entityBudget").value)||0, income:Number($("entityIncome").value)||0, expenses:Number($("entityExpenses").value)||0,
-        client_name:$("entityClient").value.trim(), client_email:$("clientEmail").value.trim(), client_phone:$("clientPhone").value.trim(), client_company:$("clientCompany").value.trim(), client_status:"نشط", client_notes:$("entityDescription").value.trim(), team_members:$("entityTeam").value.trim(), activity:$("entityActivity").value.trim(),
-        due_date:$("entityDueDate").value, archived:false, created_at:now, updated_at:now
-      };
-      let result;
-      try {
-        if(id) {
-          const old=state.records.find(r=>r.__backendId===id);
-          if (!old) { showFormMessage("تعذر العثور على السجل. حدّثي الصفحة وحاولي مرة أخرى."); return; }
-          result=await window.dataSdk.update({...old,...payload,archived:old.archived,created_at:old.created_at});
-        } else result=await window.dataSdk.create(payload);
-        if(result.isOk) { await logOperation(id?"update":"create","كيان",id||"",id?"تم تعديل بيانات كيان":"تمت إضافة كيان جديد"); closeModal(); } else showFormMessage("تعذر حفظ البيانات. يرجى التحقق من الاتصال ثم المحاولة.");
-      } catch (error) {
-        showFormMessage("تعذر الاتصال أثناء الحفظ. حاولي مرة أخرى.");
-      } finally {
-        button.disabled=false; button.classList.remove("opacity-60","cursor-wait");
-      }
-    });
-
-    $("taskForm").addEventListener("submit", async event => {
-      event.preventDefault();
-      const button=$("saveTask");
-      if(taskRecords().length + state.records.filter(r=>!r.task_title).length >= 999){ showToast("تم الوصول إلى الحد الأقصى: ٩٩٩ سجلاً."); return; }
-      button.disabled=true; button.classList.add("opacity-60","cursor-wait");
-      try {
-        const now=new Date().toISOString(); const payload={task_title:$("taskTitle").value.trim(),task_description:"",task_status:$("taskStatus").value,task_priority:$("taskPriority").value,assignee:$("taskAssignee").value.trim(),team_name:$("taskTeam").value,task_due_date:$("taskDueDate").value,task_conditions:$("taskConditions").value.trim(),task_reminder:$("taskReminder").checked,task_approved:$("taskApproved").checked,approved_by:$("taskApproved").checked ? $("taskAssignee").value.trim() : "",approved_at:$("taskApproved").checked ? now : "",task_progress:$("taskStatus").value==="مكتملة"?100:0,task_completed:$("taskStatus").value==="مكتملة",archived:false,created_at:now,updated_at:now};
-        const oldTask=state.records.find(r=>r.__backendId===state.editingTaskId); const result=state.editingTaskId&&oldTask ? await window.dataSdk.update({...oldTask,...payload,archived:oldTask.archived}) : await window.dataSdk.create(payload);
-        if(result.isOk) { await logOperation(state.editingTaskId?"update":"create","مهمة",state.editingTaskId||"",state.editingTaskId?"تم تعديل مهمة":"تمت إضافة مهمة جديدة"); state.editingTaskId=""; event.target.reset(); $("saveTask").textContent="إضافة مهمة"; } else showToast("تعذر حفظ المهمة. حاولي مرة أخرى.");
-      } catch (error) { showToast("تعذر الاتصال أثناء إضافة المهمة."); }
-      finally { button.disabled=false; button.classList.remove("opacity-60","cursor-wait"); }
-    });
-    ["addEntityTop","addEntitySide"].forEach(id=>$(id).addEventListener("click",()=>openModal()));
-    $("memberAccountForm").addEventListener("submit",async e=>{e.preventDefault();const now=new Date().toISOString(),button=e.target.querySelector("button");button.disabled=true;const result=await window.dataSdk.create({member_name:$("memberName").value,member_team:$("memberTeam").value,member_credit:Number($("memberCredit").value)||0,member_debit:Number($("memberDebit").value)||0,member_statement:$("memberStatement").value.trim(),member_notes:"",member_created_at:now,archived:false,created_at:now,updated_at:now});button.disabled=false;if(result.isOk)e.target.reset();else showToast("تعذر حفظ حساب العضو.");});
-    $("clientAccountForm").addEventListener("submit",async e=>{e.preventDefault();const now=new Date().toISOString(),button=e.target.querySelector("button"),client=state.records.find(r=>r.entity_type==="client"&&r.name===$("clientAccountName").value);button.disabled=true;const result=await window.dataSdk.create({client_id:client?.__backendId||"",client_name:$("clientAccountName").value,client_credit:Number($("clientAccountCredit").value)||0,client_debit:Number($("clientAccountDebit").value)||0,client_statement:$("clientAccountStatement").value.trim(),client_status:"نشط",client_notes:"",client_created_at:now,archived:false,created_at:now,updated_at:now});button.disabled=false;if(result.isOk)e.target.reset();else showToast("تعذر حفظ حساب العميل.");});
-    $("taskTeam").addEventListener("change",refreshAssignees);
-    $("closeModal").addEventListener("click",closeModal); $("cancelModal").addEventListener("click",closeModal);
-    $("entityModal").addEventListener("click",e=>{ if(e.target === $("entityModal")) closeModal(); });
-    ["searchInput","typeFilter","archiveToggle"].forEach(id=>$(id).addEventListener(id==="searchInput"?"input":"change",renderList));
-    ["operationTypeFilter","operationDateFilter"].forEach(id=>$(id).addEventListener("change",renderOperations));
-    $("printOperations").addEventListener("click",()=>window.print());
-    $("exportOperations").addEventListener("click",()=>{ const rows=operationRecords().map(r=>[r.operation_type,r.operation_entity,r.operation_details,r.operation_actor,r.operation_at]); const csv="نوع العملية,الكيان,التفاصيل,المستخدم,التاريخ\\n"+rows.map(r=>r.map(v=>`"${String(v||"").replaceAll('"','""')}"`).join(",")).join("\\n"); const blob=new Blob(["\\ufeff"+csv],{type:"text/csv;charset=utf-8"}); const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="سجل-العمليات.csv"; a.click(); URL.revokeObjectURL(a.href); });
-    $("exportDailyCsv").addEventListener("click",()=>{ const rows=state.records.map(r=>[r.entity_type||"",r.name||r.task_title||r.member_name||r.client_name||"",r.status||r.task_status||"",r.owner||r.assignee||"",r.budget||0,r.income||0,r.expenses||0,r.updated_at||r.created_at||""]); const csv="النوع,الاسم,الحالة,المسؤول,الميزانية,الإيرادات,المصروفات,آخر تحديث\\n"+rows.map(r=>r.map(v=>`"${String(v||"").replaceAll('"','""')}"`).join(",")).join("\\n"); const blob=new Blob(["\\ufeff"+csv],{type:"text/csv;charset=utf-8"}); const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="التقرير-اليومي.csv"; a.click(); URL.revokeObjectURL(a.href); });
-    function printReport(title, sections){ const day=new Date().toLocaleDateString("ar-SA"); const w=window.open("","_blank"); if(!w)return; w.document.write(`<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>${title}</title><style>body{font-family:Arial,sans-serif;color:#18324a;padding:32px;line-height:1.7}h1,h2{color:#167c80;border-bottom:2px solid #167c80;padding-bottom:10px}.row{border-bottom:1px solid #e6eef0;padding:8px 0}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.box{border:1px solid #dce8ed;border-radius:10px;padding:12px}@media print{button{display:none}}</style></head><body><h1>${title}</h1><p>التاريخ: ${day}</p>${sections}<script>window.onload=()=>window.print()<\\/script></body></html>`); w.document.close(); }
-    $("financialReportPdf").addEventListener("click",()=>{ const a=state.records.filter(r=>!r.archived); printReport("التقرير المالي",`<h2>الملخص المالي</h2><div class="grid"><div class="box">الميزانيات<br><b>${money.format(a.reduce((n,r)=>n+(Number(r.budget)||0),0))}</b></div><div class="box">الإيرادات<br><b>${money.format(a.reduce((n,r)=>n+(Number(r.income)||0),0))}</b></div><div class="box">المصروفات<br><b>${money.format(a.reduce((n,r)=>n+(Number(r.expenses)||0),0))}</b></div><div class="box">الصافي<br><b>${money.format(a.reduce((n,r)=>n+(Number(r.income)||0)-(Number(r.expenses)||0),0))}</b></div></div>${a.map(r=>`<div class="row"><b>${esc(r.name||"سجل")}</b> — الإيرادات: ${money.format(Number(r.income)||0)} — المصروفات: ${money.format(Number(r.expenses)||0)}</div>`).join("")}`); });
-    $("professionalReportPdf").addEventListener("click",()=>{ const a=state.records.filter(r=>!r.archived); printReport("التقرير المهني",`<h2>ملخص الأداء التشغيلي</h2><div class="grid"><div class="box">الشركات<br><b>${a.filter(r=>r.entity_type==="company").length}</b></div><div class="box">الفرق<br><b>${a.filter(r=>r.entity_type==="team").length}</b></div><div class="box">المهام<br><b>${taskRecords().length}</b></div><div class="box">المكتملة<br><b>${taskRecords().filter(r=>r.task_status==="مكتملة").length}</b></div></div>${a.map(r=>`<div class="row"><b>${esc(r.name||r.task_title||"سجل")}</b> — ${esc(r.status||r.task_status||"غير محدد")} — المسؤول: ${esc(r.owner||r.assignee||"غير محدد")}</div>`).join("")}`); });
-    $("dailyReportPdf").addEventListener("click",()=>{ const day=new Date().toLocaleDateString("ar-SA"); const active=state.records.filter(r=>!r.archived); const html=`<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>التقرير اليومي - ${day}</title><style>body{font-family:Arial,sans-serif;color:#18324a;padding:32px;line-height:1.7}h1{color:#167c80;border-bottom:2px solid #167c80;padding-bottom:12px}h2{margin-top:28px;color:#167c80}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.box{border:1px solid #dce8ed;border-radius:10px;padding:12px}.row{border-bottom:1px solid #e6eef0;padding:8px 0}@media print{button{display:none}}</style></head><body><h1>التقرير اليومي الكامل</h1><p>التاريخ: ${day}</p><div class="grid"><div class="box">الشركات<br><b>${active.filter(r=>r.entity_type==="company").length}</b></div><div class="box">الفروع<br><b>${active.filter(r=>r.entity_type==="branch").length}</b></div><div class="box">المهام<br><b>${taskRecords().length}</b></div><div class="box">السجلات<br><b>${active.length}</b></div></div><h2>الكيانات والمهام</h2>${active.map(r=>`<div class="row"><b>${esc(r.name||r.task_title||r.member_name||r.client_name||"سجل")}</b> — ${esc(r.status||r.task_status||"سجل")} — المسؤول: ${esc(r.owner||r.assignee||"غير محدد")}</div>`).join("")}<h2>الملخص المالي</h2><p>الميزانيات: ${money.format(active.reduce((n,r)=>n+(Number(r.budget)||0),0))} | الإيرادات: ${money.format(active.reduce((n,r)=>n+(Number(r.income)||0),0))} | المصروفات: ${money.format(active.reduce((n,r)=>n+(Number(r.expenses)||0),0))}</p><script>window.onload=()=>window.print()<\\/script></body></html>`; const w=window.open("","_blank"); if(w){w.document.write(html);w.document.close();} });
-
-    const handler = { onDataChanged(data) { state.records=data; renderAll(); } };
-    (async () => {
-      const init = await window.dataSdk.init(handler);
-      if(!init.isOk) {
-        $("emptyState").classList.remove("hidden");
-        $("emptyState").querySelector("p").textContent="تعذر تحميل البيانات حالياً.";
-      }
-    })();
-    lucide.createIcons();
-  </script>
- </body>
-                                                                                                                                 </html>
+</body>
+</html>
